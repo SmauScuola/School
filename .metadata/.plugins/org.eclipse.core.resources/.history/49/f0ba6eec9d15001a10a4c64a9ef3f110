@@ -1,0 +1,58 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.CardLayout;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JComboBox;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JToolBar;
+import java.awt.FlowLayout;
+import java.awt.BorderLayout;
+
+public class AdminForm {
+
+	private JFrame frmAdministrator;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void Open() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AdminForm window = new AdminForm();
+					window.frmAdministrator.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public AdminForm() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmAdministrator = new JFrame();
+		frmAdministrator.setTitle("Administrator");
+		frmAdministrator.setBounds(100, 100, 450, 300);
+		frmAdministrator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmAdministrator.getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		JToolBar toolBar = new JToolBar();
+		frmAdministrator.getContentPane().add(toolBar, BorderLayout.NORTH);
+	}
+}

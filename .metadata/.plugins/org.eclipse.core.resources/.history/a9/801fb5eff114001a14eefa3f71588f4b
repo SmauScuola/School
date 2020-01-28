@@ -1,0 +1,103 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+public class LoginForm {
+
+	private JFrame frmManagement;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LoginForm window = new LoginForm();
+					window.frmManagement.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public LoginForm() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmManagement = new JFrame();
+		frmManagement.setResizable(false);
+		frmManagement.setTitle("Management");
+		frmManagement.setBounds(100, 100, 269, 176);
+		frmManagement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmManagement.getContentPane().setLayout(null);
+		
+		JLabel lblUsername = new JLabel("Username:");
+		lblUsername.setBounds(10, 11, 82, 14);
+		frmManagement.getContentPane().add(lblUsername);
+		
+		textField = new JTextField();
+		textField.setBounds(107, 8, 146, 20);
+		frmManagement.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblPassword = new JLabel("Password:");
+		lblPassword.setBounds(10, 39, 82, 14);
+		frmManagement.getContentPane().add(lblPassword);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(107, 36, 146, 20);
+		frmManagement.getContentPane().add(textField_1);
+		
+		///LOGIN///
+		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
+		btnLogin.setBounds(164, 113, 89, 23);
+		frmManagement.getContentPane().add(btnLogin);
+		
+		///REGISTER//
+		JButton btnRegister = new JButton("Register");
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					DocumentBuilderFactory docBuildFactory = DocumentBuilderFactory.newInstance();
+					DocumentBuilder docBuild = docBuildFactory.newDocumentBuilder();
+					Document doc = docBuild.newDocument();
+					
+				} catch (ParserConfigurationException e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnRegister.setBounds(65, 113, 89, 23);
+		frmManagement.getContentPane().add(btnRegister);
+	}
+}

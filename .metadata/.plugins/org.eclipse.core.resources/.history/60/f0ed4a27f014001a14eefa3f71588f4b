@@ -1,0 +1,72 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class LoginForm {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LoginForm window = new LoginForm();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public LoginForm() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 242, 176);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblUsername = new JLabel("Username:");
+		lblUsername.setBounds(10, 11, 82, 14);
+		frame.getContentPane().add(lblUsername);
+		
+		textField = new JTextField();
+		textField.setBounds(80, 8, 131, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblPassword = new JLabel("Password:");
+		lblPassword.setBounds(10, 39, 82, 14);
+		frame.getContentPane().add(lblPassword);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(80, 36, 131, 20);
+		frame.getContentPane().add(textField_1);
+		
+		JButton btnLogin = new JButton("Login");
+		btnLogin.setBounds(127, 103, 89, 23);
+		frame.getContentPane().add(btnLogin);
+		
+		JButton btnRegister = new JButton("Register");
+		btnRegister.setBounds(28, 103, 89, 23);
+		frame.getContentPane().add(btnRegister);
+	}
+}

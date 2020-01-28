@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Meteo.java&apos; to &apos;SAD STORY BRO/src/sms&apos;&#x0D;&#x0A;- Original project: &apos;Meteo&apos;&#x0D;&#x0A;- Destination element: &apos;SAD STORY BRO/src/sms&apos;&#x0D;&#x0A;- Original element: &apos;Meteo.java&apos;" description="Copy compilation unit" destination="=SAD STORY BRO/src&lt;sms" element1="/src&lt;{Meteo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1575113565139" units="1" version="1.0"/>
+</session>
